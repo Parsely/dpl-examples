@@ -1,0 +1,8 @@
+lambdas:
+  lambda_stream:
+    code: lambda_stream
+    handler: stream.handler
+    runtime: python
+    description: Streaming data consumer from Parse.ly DPL
+    #role:
+    #memory:
