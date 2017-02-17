@@ -3,6 +3,9 @@ SAMPLE_DATA := "import base64; import json; print(json.dumps({\"Records\": [{\"e
 deploy:
 	gordon build && gordon apply dev
 
-test:
+run:
 	python -c ${SAMPLE_DATA} | gordon run app.lambda_stream
 	python -c ${SAMPLE_DATA}
+
+test:
+	python -m unittest discover -v -b
